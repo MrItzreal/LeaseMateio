@@ -5,36 +5,28 @@
 application.yml
 .env
 .env.*
-
 # Template files (include in repo for reference)
 # application.yml.example
 # .env.example
-
 # =================================================================
 # Build & Dependencies
 # =================================================================
 target/
 node_modules/
 .DS_Store
-
 # Maven Wrapper - ignore the downloaded jar, but keep the wrapper
 .mvn/wrapper/maven-wrapper.jar
 dependency-reduced-pom.xml
-
 # Gradle - ignore the entire .gradle directory (in case used)
 .gradle/
-
 # Java build artifacts
 *.class
-
 # Code coverage tools
 jacoco.exec
-
 # Logs
 *.log
 logs/
 log/
-
 # =================================================================
 # IDE Specific Files
 # =================================================================
@@ -44,7 +36,6 @@ log/
 *.iml
 *.ipr
 out/
-
 ### STS/Eclipse ###
 .apt_generated
 .classpath
@@ -53,10 +44,8 @@ out/
 .settings/
 .springBeans
 .sts4-cache/
-
 ### VS Code ###
 .vscode/
-
 ### NetBeans ###
 nbproject/private/
 build/
@@ -64,7 +53,6 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-
 # =================================================================
 # OS & Temporary Files
 # =================================================================
@@ -73,11 +61,9 @@ Thumbs.db
 ehthumbs.db
 ._*
 Icon?
-
 # Linux/Unix
 *.pid
 *.seed
-
 # Temp / Backup files
 *.swp
 *.swo
