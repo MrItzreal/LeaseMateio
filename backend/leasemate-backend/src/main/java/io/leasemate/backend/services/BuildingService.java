@@ -28,6 +28,8 @@ public class BuildingService {
     newBuilding.setName(requestDTO.name());
     newBuilding.setAddress(requestDTO.address());
     newBuilding.setTotalGuestParkingSpots(requestDTO.totalGuestParkingSpots());
+    newBuilding.setContactEmail(requestDTO.contactEmail());
+    newBuilding.setContactPhoneNumber(requestDTO.contactPhoneNumber());
 
     Building savedBuilding = buildingRepository.save(newBuilding);
     return mapToBuildingResponseDTO(savedBuilding);
@@ -48,6 +50,8 @@ public class BuildingService {
         building.getName(),
         building.getAddress(),
         building.getTotalGuestParkingSpots(),
-        building.getApartments() != null ? building.getApartments().size() : 0);
+        building.getApartments() != null ? building.getApartments().size() : 0,
+        building.getContactEmail(),
+        building.getContactPhoneNumber());
   }
 }

@@ -20,8 +20,30 @@ public class Building {
   @Column(name = "total_guest_parking_spots")
   private int totalGuestParkingSpots;
 
+  @Column(name = "contact_email")
+  private String contactEmail;
+
+  @Column(name = "contact_phone_number")
+  private String contactPhoneNumber;
+
   @OneToMany(mappedBy = "building", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<Apartment> apartments;
+
+  public String getContactEmail() {
+    return contactEmail;
+  }
+
+  public void setContactEmail(String contactEmail) {
+    this.contactEmail = contactEmail;
+  }
+
+  public String getContactPhoneNumber() {
+    return contactPhoneNumber;
+  }
+
+  public void setContactPhoneNumber(String contactPhoneNumber) {
+    this.contactPhoneNumber = contactPhoneNumber;
+  }
 
   // 'Default' Constructor
   public Building() {
