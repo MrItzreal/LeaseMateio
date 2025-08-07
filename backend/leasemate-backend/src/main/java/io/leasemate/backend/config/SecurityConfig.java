@@ -27,6 +27,7 @@ public class SecurityConfig {
 
         // Define authorization rules
         .authorizeHttpRequests(auth -> auth
+            .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
             .requestMatchers("/api/**").authenticated() // Secure all API endpoints
             .anyRequest().permitAll() // Allow other requests (like to root '/')
         )
