@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.leasemate.backend.dtos.ApartmentRequestDTO;
 import io.leasemate.backend.dtos.ApartmentResponseDTO;
 import io.leasemate.backend.services.ApartmentService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @RequestMapping("/api/buildings/{buildingId}/apartments")
+@Tag(name = "Apartment API")
 public class ApartmentController {
 
   private final ApartmentService apartmentService;
