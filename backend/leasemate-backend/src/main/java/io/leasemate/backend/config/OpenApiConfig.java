@@ -1,6 +1,7 @@
 package io.leasemate.backend.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
@@ -35,7 +36,8 @@ import org.springframework.context.annotation.Configuration;
     name = "bearerAuth", // A name for this security scheme
     type = SecuritySchemeType.HTTP, // The type of security scheme
     scheme = "bearer", // The specific scheme (bearer tokens)
-    bearerFormat = "JWT" // A hint about the token format
+    bearerFormat = "JWT", // A hint about the token format
+    in = SecuritySchemeIn.HEADER //Specifies credentials location in HTTP reqs.
  )
 public class OpenApiConfig {
   // OpenApiConfig class is just a holder for the above configuration.
